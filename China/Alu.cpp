@@ -15,6 +15,11 @@ namespace ALU
 	template<typename T>
 	std::string SHIM (const T& ob1,const T& ob2)/*"/"*/
 	{
+		if (ob2 == 0) 
+		{
+			std::cout<< " You cant divide in zero \n";
+			exit(-1);
+		}
 		return std::string(ob1/ob2);
 	}
 	template<typename T>
